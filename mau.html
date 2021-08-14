@@ -1,0 +1,41 @@
+<form action="//submit.form" id="SignUp100" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.LastName.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Age.value == "") { alert('Age is required.'); frm.Age.focus(); return false; }
+if (frm.Password.value == "") { alert('Password is required.'); frm.Password.focus(); return false; }
+if (frm.RepeatPassword.value == "") { alert('Password is required.'); frm.RepeatPassword.focus(); return false; }
+if (frm.RepeatPassword.value != frm.Password.value) { alert("Try again"); frm.RepeatPassword.focus(); return false}
+return true; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0" width="600">
+<tr> <td>
+<label for="Name">Name*:</label>
+</td> <td>
+<input name="Name" type="text" maxlength="60" style="width:100%;max-width: 146px;" />
+</td> </tr> <tr> <td>
+<label for="FromEmailAddress">Email address*:</label>
+</td> <td>
+<input name="FromEmailAddress" type="text" maxlength="60" style="width:100%;max-width: 300px;" />
+</td> </tr> <tr> <td>
+<label for="Age">Age*:</label>
+</td> <td>
+<input name="Age" type="text" maxlength="120" style="width:100%;max-width: 350px;" />
+</td> </tr> <tr> <td>
+<label for="Password">Password*:</label>
+</td> <td>
+<input name="Passwword" type="text" maxlength="120" style="width:100%;max-width: 300px;" />
+</td> </tr> <tr> <td>
+<label for="RepeatPasswword">Repeat Password*:</label>
+</td> <td>
+<input name="RepeatPasssword" type="text" maxlength="120" style="width:100%;max-width: 300px;" />
+</td> </tr> <tr> <td>
+* - required fields
+</td> <td>
+<script src="https://www.100forms.com/js/FORMKEY:LTWQ99XF62UH/SEND:my@email.com" type="text/javascript"></script>
+<input name="skip_Submit" type="submit" value="Submit" />
+</td> </tr>
+</table>
+</form>
